@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+	   COMP 125 - Summer 2019
+	   Client-Side Web Development
+	   Blessing Ajiboye
+
+	   Membership Form - Assignment 4
+	   Field Validation - JavaScript
+	   Author: Tiago Franco Finotti #301041366
+	   Date: Jul 9th 2019
+
+	   Filename: Membership.html
+	-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Membership Form - Assignment 4</title>
+    <meta content="Field Validation, Javascript" name="keywords">
+    <meta content="Form validation using Javascript" name="description">
+    <link href="MembershipStyles.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <link href="MembershiStyles.css" rel="stylesheet" />
+    <![endif]-->
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+    <div id="allPage">
+        <header>
+            <h1>
+                <img alt="Centennial Logo" height="209" src="images/CC50thAnniversary.jpg" width="200"><br>
+                Centennial College - Registration Form</h1>
+        </header>
+        <form id="registration">
+            <fieldset>
+                <legend>Personal Info</legend>
+                <label for="txtFirstName">First Name:</label>
+                <input id="txtFirstName" name="txtFirstName" size="25" tabindex="1" type="text"><br>
+                <p id="fNameError" class="errorMsg"></p>
+                <label for="txtLastName">Last Name:</label>
+                <input id="txtLastName" name="txtLastName" size="25" tabindex="3" type="text"><br>
+                <p id="lNameError" class="errorMsg"></p>
+                <label for="txtAddress">Address:</label>
+                <input id="txtAddress" name="txtAddress" size="50" tabindex="5" type="text"><br>
+                <p id="addressError" class="errorMsg"></p>
+                <label for="txtCity">City:</label>
+                <input id="txtCity" name="txtCity" size="25" tabindex="7" type="text"><br>
+                <p id="cityError" class="errorMsg"></p>
+                <label for="txtPostal">Postal Code:</label>
+                <input id="txtPostal" name="txtPostal" size="25" tabindex="9" type="text" placeholder="A0A 0A0"><br>
+                <p id="postalError" class="errorMsg"></p>
+                <label for="lstProvince">Province:</label>
+                <select id="lstProvince" name="lstProvince" size="1" tabindex="11">
+                    <option value="QC">QC</option>
+                    <option value="ON">ON</option>
+                    <option value="MN">MN</option>
+                    <option value="SK">SK</option>
+                    <option value="AB">AB</option>
+                    <option value="BC">BC</option>
+                </select><br>
+                <label for="numAge">Age:</label>
+                <input id="numAge" name="numAge" tabindex="13" type="number"><br>
+                <p id="ageError" class="errorMsg"></p>
+                <label>Password:</label>
+                <input id="txtCreatePWD" name="txtCreatePWD" size="16" tabindex="15" type="password"><br>
+                <label>Confirm:</label>
+                <input id="txtConfirmPWD" name="txtConfirmPWD" size="16" tabindex="17" type="password"><br>
+                <p id="passwordError" class="errorMsg"></p>
+                <label for="txtEmail">Email:</label>
+                <input id="txtEmail" name="txtEmail" size="30" tabindex="19" type="email" placeholder="account@domain.com"><br>
+                <p id="emailError" class="errorMsg"></p>
+                <input id="btnSubmit" name="btnSubmit" tabindex="21" type="button" value="Complete Registration">
+                <input id="btnReset" name="btnReset" tabindex="23" type="reset" value="Clear Form">
+            </fieldset>
+        </form>
+        <section id="profile">
+            <h3>Profile</h3>
+            <div id="usernameSection">
+                <h4>Username</h4>
+                <p id="profileUsername"></p>
+            </div>
+            <div id="emailSection">
+                <h4>Email</h4>
+                <p id="profileEmail"></p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p><a href="../index.html">Back to Index</a></p>
+            <p id="copyright">&copy;&nbsp;Copyright Tiago Franco Finotti &bull; COMP125 - Summer 2019</p>
+        </footer>
+    </div>
+
+    <script src="Membership.js"></script>
+
+</body>
+
+</html>
